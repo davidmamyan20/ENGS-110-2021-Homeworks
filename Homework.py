@@ -13,15 +13,19 @@ def nthFibonacci(number):
     else:
         print("Please enter a valid number")
         return 1
-def ifPrime(n):
-    if (n == 0 or n == 1):
-        print ("The number is not prime")
-    for b in range(2,(int(n**0.5)+1)):
-        if n%b == 0:
-            print("your number is not prime")
-            return False
-    print("your number is prime")
-    return True
+def ifPrime(num):
+    if (num == 2):
+        print("it is a prime number")
+    elif(num<=1):
+        print("it is not a prime number")
+    else:
+        if(num > 1):
+            for b in range (2,num):
+                if (num % b == 0):
+                    print("it is not a prime number")
+                    return False
+                print("it is a prime number")
+                return True
 
 def binary(number):
     binary = [0,0,0,0,0,0,0,0]
