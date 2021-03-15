@@ -34,7 +34,7 @@ def binary(number):
         binary[b] = number%2
         b = b -1
         number = int(number/2)
-    print( binary)
+    print(binary)
 
 def main():
     while (True):
