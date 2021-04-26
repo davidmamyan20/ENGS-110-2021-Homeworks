@@ -21,7 +21,10 @@ int numberFibonacci (int number, int a, int b)
 
 int main()
 {
-	int n = 20;
+	int n;
+	printf ("Enter your age: ");
+	scanf("%d", &n);
+	printf ("My age is %d\n" , n);
 	int x;
 	int y;
 
