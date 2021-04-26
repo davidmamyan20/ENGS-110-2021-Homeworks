@@ -2,9 +2,11 @@
 
 int numberFibonacci (int number, int a, int b)
 {
+	int sum = 0;
+	if (number >= 0)
+	{
 	a = 0;
 	b = 1;
-	int sum = 0;
 	int temp = 0;
 	while ( b <= number )
 	{
@@ -14,10 +16,36 @@ int numberFibonacci (int number, int a, int b)
 		b = temp;
 		
 	}
-	printf ("The sum is %d\n" , sum);
+	printf ("The sum is %d\n", sum);
+	}
+	else
+	{
+		printf ("The number is not valid \n");
+	}
+
 	return sum;
 
+
 }
+
+int convert_to_binary (int c, int d, int f)
+{
+	printf("%d in binary number system is:\n", c);
+
+	for (d = 7; d >= 0; d--)
+	{
+		f = c >> d;
+
+		if (f & 1)
+			printf("1");
+		else
+			printf("0");
+	}
+	printf("\n");
+	
+	return 0;
+}
+
 
 int main()
 {
@@ -28,7 +56,8 @@ int main()
 	int x;
 	int y;
 
-	numberFibonacci(n,x,y);
+	int z =	numberFibonacci(n,x,y);
+	convert_to_binary(z,x,y);
 
 }
 
