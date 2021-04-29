@@ -28,32 +28,23 @@ int numberFibonacci (int number, int a, int b)
 
 }
 
-int convert_to_binary (int c, int d, int g)
+void print_binary (int a)
 {
-	int f;
-	if ( g < 0)
-	{
-		printf ("Not a valid number\n");
-	}
-	else
-	{
-	printf("%d in binary number system is:\n", c);
+	int c = 0;
 
-	for (d = 7; d >= 0; d--)
-	{
-		f = c >> d;
+	printf ("%d in binary is :\n", a);
 
-		if (f & 1)
-			printf("1");
-		else
-			printf("0");
-	}
+	for (int b = sizeof(int) * 8 - 1; b >= 0; b--){
+		c = a % 2;
+		a = a >> 1;
+		if (c & 1){
+			printf ("1");
+		} else {
+			printf ("0");
+		}
 	}
 	printf("\n");
-	
-	return c;
 }
-
 
 int main()
 {
@@ -65,7 +56,9 @@ int main()
 	int y;
 
 	int z =	numberFibonacci(n,x,y);
-	convert_to_binary(z,x,n);
+	print_binary(z);
+	return z;
+	
 
 }
 
