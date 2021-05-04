@@ -1,20 +1,30 @@
 #include <stdio.h>
 
-union converter
-{
-	char bytes[4];
-	unsigned int number;
-};
-converter c;
-
 int main()
 {
-	c.number = 0x1a2b3c4d;
-	printf ("c.bytes[0] = 0x%x\n", c.bytes[0]);
-	printf ("c.bytes[1] = 0x%x\n", c.bytes[1]);
-	printf ("c.bytes[2] = 0x%x\n", c.bytes[2]);
-	printf ("c.bytes[3] = 0x%x\n", c.bytes[3]);
+	int arr[100] = {0};
+	int i, x, pos, n = 10;
+	for (i = 0; i < 10; i++)
+		arr[i] = i + 1;
+
+	for (i = 0; i < n; i++)
+		printf("%d", arr[i]);
+	printf("\n");
+
+	x = 50;
+
+	pos = 5;
+
+	n++;
+
+	for (i = n-1; i >= pos; i--)
+		arr[i] = arr[i - 1];
+	arr[pos - 1] = x;
+
+	for (i = 0; i < n; i++)
+		printf("%d", arr[i]);
+	printf("\n");
+
 	return 0;
-
-
 }
+
