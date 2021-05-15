@@ -4,7 +4,6 @@
 int main()
 {
 	FILE *fp;
-	char data[10];
 	fp = fopen("data.txt", "r");
 	if ( fp == NULL)
 	{
@@ -20,11 +19,10 @@ int main()
 
 	while ( fscanf(fp, "%d", ptr)!= EOF)
 	{
-		fscanf(fp, "%d", *ptr);
 		sum = sum +  *ptr;
 	}
 
-	printf("Sum = %d", sum);
+	printf("Sum = %d\n", sum);
 
 	free(ptr);
 	fclose(fp);
