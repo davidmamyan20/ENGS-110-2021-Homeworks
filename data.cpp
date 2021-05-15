@@ -16,14 +16,9 @@ int main()
 	int sum = 0;
 
 
-	ptr = (int*) malloc(100 * sizeof(int));
-	if(ptr == NULL)
-	{
-		printf("Error! memory not allocated. ");
-		exit(0);
-	}
+	ptr = (int*) malloc(10 * sizeof(int));
 
-	while ( fscanf(fp, "%d", *ptr)!= EOF)
+	while ( fscanf(fp, "%d", ptr)!= EOF)
 	{
 		fscanf(fp, "%d", *ptr);
 		sum = sum +  *ptr;
