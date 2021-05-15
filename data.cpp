@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int data()
+int main()
 {
 	FILE *fp;
 	char data[10];
@@ -34,6 +34,6 @@ int data()
 	free(ptr);
 	fclose(fp);
 	
-	return sum;
+	return 0;
 
 }
